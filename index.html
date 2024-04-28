@@ -420,7 +420,7 @@
         </div>
 
         <div class="footer-socials">
-          <p class="footer-socials-label">Social media</p>
+          <p class="footer-label">Social media</p>
           <ul class="socials-list">
             <li>
               <a href="#" class="socials-list-item">
@@ -452,6 +452,22 @@
             </li>
           </ul>
         </div>
+
+        <div>
+          <p class="footer-label">Subscribe</p>
+          <form name="subscribe" class="form-subscribe">
+            <div class="form-subscribe-field">
+              <input type="email" id="subscribe_email" name="subscribe_email" />
+              <label for="subscribe_email">E-mail</label>
+            </div>
+            <button type="submit">
+              Subscribe
+              <svg class="icon icon-send" width="24" height="24">
+                <use xlink:href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -462,6 +478,105 @@
             <use xlink:href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+
+        <div class="modal-content">
+          <h2 class="modal-title">
+            Leave your contacts and we will call you back
+          </h2>
+
+          <form name="contacts" class="form-contacts" autocomplete="off">
+            <div class="field">
+              <label for="user_name">Name</label>
+              <div class="field-input-wrapper">
+                <input
+                  id="user_name"
+                  type="text"
+                  name="user_name"
+                  minlength="3"
+                  required
+                />
+                <span class="field-icon">
+                  <svg class="icon icon-person" width="12" height="12">
+                    <use xlink:href="./images/icons.svg#icon-person"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="user_phone">Phone</label>
+              <div class="field-input-wrapper">
+                <input
+                  id="user_phone"
+                  type="tel"
+                  name="user_phone"
+                  minlength="18"
+                  maxlength="18"
+                />
+                <span class="field-icon">
+                  <svg class="icon icon-phone" width="13" height="13">
+                    <use xlink:href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="user_email">Email</label>
+              <div class="field-input-wrapper">
+                <input
+                  id="user_email"
+                  type="email"
+                  name="user_email"
+                  required
+                  pattern="[a-zA-Z\S]+@[a-zA-Z\S]+\.[a-z]{2,3}$"
+                  title="Email must contain domen"
+                />
+                <span class="field-icon">
+                  <svg class="icon icon-email" width="15" height="15">
+                    <use xlink:href="./images/icons.svg#icon-email"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="user_comment">Comment</label>
+              <div class="field-input-wrapper">
+                <textarea
+                  id="user_comment"
+                  name="user_comment"
+                  placeholder="Text input"
+                  minlength="10"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="form-contacts-agreement">
+              <input
+                type="checkbox"
+                value="false"
+                id="user_agreement"
+                class="visually-hidden"
+              />
+              <label class="form-contacts-agreement-desc" for="user_agreement">
+                <span class="form-contacts-checkbox">
+                  <svg class="icon icon-check" width="10" height="10">
+                    <use xlink:href="./images/icons.svg#icon-check"></use>
+                  </svg> </span
+                >I accept the terms and conditions of the
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                  >Privacy Policy</a
+                >
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-contacts-btn">
+              Send
+            </button>
+          </form>
+        </div>
       </div>
     </div>
 
