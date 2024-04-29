@@ -167,6 +167,13 @@ input {
 }
 
 .form-contacts-agreement
+  input:focus
+  + .form-contacts-agreement-desc
+  .form-contacts-checkbox {
+  border-color: var(--pressed-state-color);
+}
+
+.form-contacts-agreement
   input:checked
   + .form-contacts-agreement-desc
   .form-contacts-checkbox
@@ -216,6 +223,28 @@ input {
 
 .form-subscribe-field label {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2px 6px;
+  left: 10px;
+  background-color: var(--dark-color);
+  transition: transform var(--transition);
+  cursor: text;
+}
+
+.form-subscribe-field input:focus + label,
+.form-subscribe-field input:not(:placeholder-shown) + label {
+  transform: translateY(-130%);
+}
+
+.form-subscribe-field input::placeholder {
+  opacity: 0;
+  transition: opacity 200ms ease-in 0s;
+}
+
+.form-subscribe-field input:focus::placeholder {
+  opacity: 1;
+  transition-delay: 300ms;
 }
 
 .form-subscribe input {

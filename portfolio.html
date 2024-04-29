@@ -312,14 +312,18 @@
         </div>
 
         <div>
-          <label for="subscribe_email" class="footer-label">Subscribe</label>
-          <form name="subscribe" class="form-subscribe">
-            <input
-              type="email"
-              id="subscribe_email"
-              name="subscribe_email"
-              placeholder="E-mail"
-            />
+          <p class="footer-label">Subscribe</p>
+          <form name="subscribe" class="form-subscribe" autocomplete="off">
+            <div class="form-subscribe-field">
+              <input
+                type="email"
+                id="subscribe_email"
+                name="subscribe_email"
+                placeholder="Enter your email"
+                required
+              />
+              <label for="subscribe_email">E-mail</label>
+            </div>
             <button type="submit">
               Subscribe
               <svg class="icon icon-send" width="24" height="24">
